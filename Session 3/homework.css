@@ -1,0 +1,132 @@
+:root{
+	--bg-color: rgb(20,20,20)
+}
+/* h1 style */
+h1{
+	color: white;
+	padding:5px;
+	margin: 0;
+	text-align: center;
+}
+/* body style */
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: var(--bg-color);
+	font-family: serif;
+	color: white; 
+}
+/* nav style */
+nav{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+/* navigation items style */
+.menu-item{
+	color: white;
+	font: serif;
+	font-size: 100px;
+	display: block;
+	padding-block: 4px;
+	text-decoration: none;
+}
+/* nav div style */
+#menu-items{
+	margin-left: 5%;
+	margin-bottom: 5%;
+	
+}
+
+#menu-background-image {
+	background-image: url("Media/ono-01-1627360374-1627360374.jpg");
+	background-position: center 40%;
+	background-size: 110vmax;
+	height: 100%;
+	left: 0px;  
+	opacity: 0.15;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+ }
+ /* All sections general style */
+ section{
+	background: linear-gradient(to bottom, --bg-color, #ffccbc); 
+	padding: 40px; 
+	border: 5px solid gold; 
+	border-radius: 10px; 
+ }
+ h2{
+	margin-top: 0px;
+	text-align: center; 
+	margin-bottom: 20px;
+ }
+ ul{
+	font-size: 25px; 
+	line-height: 1.3; 
+	margin: 0; 
+	padding: 0; 
+	list-style: none;
+ }
+ li{
+	margin-bottom: 20px; 
+	position: relative; 
+	padding-left: 40px;
+ }
+ /* span style used to numerate achievements */
+ span.spclass{
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	background: gold; 
+	 width: 30px; 
+	 height: 30px; 
+	 display: flex; 
+	 align-items: center; 
+	 justify-content: center; 
+	 border-radius: 50%; 
+	 font-weight: bold
+ }
+ figure{
+	text-align: center;
+ }
+ footer{
+	background: linear-gradient(to right, #880e4f, #b71c1c); color: white; 
+	text-align: center; 
+	padding: 30px 20px; 
+	position: relative; 
+	border-top: 5px solid gold;
+ }
+ /* image style inside achievement section */
+ #image{
+	opacity: 0.5;
+	cursor: pointer;
+ }
+ /* hover of image inside achievement section */
+ #image:hover{
+	opacity: 1;
+ }
+
+ q{
+	font-size: 45px; 
+	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	opacity: 0.3;
+	cursor: pointer;
+	text-align:center;
+ }
+ /* hover effect when mouse gets to quote */
+ q:hover{
+	opacity:1.5
+ }
+ p.insider{
+	text-align: justify;
+ }
+ /* style of span (question) used in article */
+ span.question{
+	color: chartreuse;
+   font-weight: bold;
+ }
+ 
+ 
+  
