@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="table.css">
+	<title>Document</title>
+</head>
+
+<body>
+<!-- list of participants table -->
+	<table>
+		<caption><b>List of Participants</b> </caption>
+		<!-- headers -->
+		<tr class="headers">
+			<th scope="col">Name</th>
+			<th scope="col">Age</th>
+			<th scope="col">E-mail</th>
+		</tr>
+		<!-- content data -->
+		<tr role="row">
+			<td>Ben Dariush</td>
+			<td>34</td>
+			<td>bd@gmail.com</td>
+		</tr>
+		<tr role="row">
+			<td>Ben Dariush</td>
+			<td>34</td>
+			<td>bd@gmail.com</td>
+		</tr>
+		<tr role="row">
+			<td>Ben Dariush</td>
+			<td>34</td>
+			<td>bd@gmail.com</td>
+		</tr>
+		<tr role="row">
+			<td>Ben Dariush</td>
+			<td>34</td>
+			<td>bd@gmail.com</td>
+		</tr>
+		<tr role="row">
+			<td>Ben Dariush</td>
+			<td>34</td>
+			<td>bd@gmail.com</td>
+		</tr>
+
+	</table>
+	<br>
+	
+	<br>
+	<!-- Weekly Activity Schedule Table -->
+	<table>
+		<caption><b>Weekly Activity Schedule</b></caption>
+
+				<!--column headers -->
+		<tr class="headers">
+			<th></th>
+			<th role="columnheader" scope="col">Monday</th>
+			<th role="columnheader" scope="col">Tuesday</th>
+			<th role="columnheader" scope="col">Wednesday</th>
+			<th role="columnheader" scope="col">Thursday</th>
+			<th role="columnheader" scope="col">Friday</th>
+			<th role="columnheader" scope="col">Saturday</th>
+			<th role="columnheader" scope="col">Sunday</th>
+		</tr>
+			<!--row headers -->
+		<tr role="row">
+			<th role="rowheader" class="headers" scope="row">Morning</th>
+			<td colspan="7">Yoga Class</td>
+		</tr>
+			<!--content data -->
+		<tr role="row">
+			<th role="rowheader" class="headers" scope="row">Afternoon</th>
+			<td colspan="3">Team Meeting</td>
+			<td>Trying</td>
+			<td>Lying</td>
+			<td>Buying</td>
+			<td>Smiling</td>
+		</tr>
+		<tr role="row">
+			<th role="rowheader" class="headers" scope="row">Evening</th>
+			<td role="cell">Dancing</td>
+			<td role="cell">Playing</td>
+			<td role="cell">Drawing</td>
+			<td role="cell">Trying</td>
+			<td role="cell">Lying</td>
+			<td role="cell">Buying</td>
+			<td role="cell">Smiling</td>
+		</tr>
+	</table>
+	<br>
+	
+	<br>
+		<!--Shopping cart table -->
+	<table>
+		<caption><b>Shopping cart table</b> </caption>
+		<tr role="row">
+				<!--column headers -->
+			<thead role="rowgroup">
+				<th role="columnheader" class="headers">Name</th>
+				<th role="columnheader" class="headers">Quantity</th>
+				<th role="columnheader" class="headers">Price per item</th>
+				<th role="columnheader" class="headers">Total Price</th>
+			</thead>
+		</tr>
+		<!--content data -->
+		<tbody>
+			<tr role="row">
+				<td role="cell" headers="item">Ball</td>
+				<td role="cell" headers="quantity">2</td>
+				<td role="cell" headers="price">120$</td>
+				<td role="cell" headers=" total price">240$</td>
+			</tr>
+			<tr role="row">
+				<td role="cell" headers="item">Ball</td>
+				<td role="cell" headers="quantity">2</td>
+				<td role="cell" headers="price">120$</td>
+				<td role="cell" headers=" total price">240$</td>
+			</tr>
+			<tr role="row">
+				<td role="cell" headers="item">Ball</td>
+				<td role="cell" headers="quantity">2</td>
+				<td role="cell" headers="price">120$</td>
+				<td role="cell" headers=" total price">240$</td>
+			</tr>
+			<tr role="row">
+				<td role="cell" headers="item">Ball</td>
+				<td role="cell" headers="quantity">2</td>
+				<td role="cell" headers="price">120$</td>
+				<td role="cell" headers=" total price">240$</td>
+			</tr>
+		</tbody>
+		<!-- footer with Total price -->
+		<tfoot>
+			<td role="cell" style="background-color:rgb(244, 137, 5); height: 30px;" colspan="3"> Total Price of all items:
+			</td>
+			<td role="cell" style="background-color: rgb(244, 137, 5);">960$ </td>
+		</tfoot>
+
+	</table>
+	<br>
+	<!-- shopping cart table with details -->
+	<table>
+		<caption><b>With details</b> </caption>
+		<tr role="row">
+			<thead role="rowgroup">
+				<th role="columnheader" class="headers">Name</th>
+				<th role="columnheader" class="headers">Quantity</th>
+				<th role="columnheader" class="headers">Price per item</th>
+				<th role="columnheader" class="headers">Total Price</th>
+				<th role="columnheader" class="headers">Details</th>
+			</thead>
+		</tr>
+		<tbody>
+			<tr role="row">
+				<td role="cell" headers="item">Ball</td>
+				<td role="cell" headers="quantity">2</td>
+				<td role="cell" headers="price">120$</td>
+				<td role="cell" headers=" total price">240$</td>
+				<td>
+					<!-- nested table in detailed column -->
+					<table>
+						<thead>
+							<tr role="row">
+								<th style="font-size: 20px;" class="headers">Weight</th>
+								<th style="font-size: 20px;" class="headers">Brand</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr role="row">
+								<td>0.5kg</td>
+								<td>Wilson</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr role="row">
+				<td role="cell" headers="item">Ball</td>
+				<td role="cell" headers="quantity">2</td>
+				<td role="cell" headers="price">120$</td>
+				<td role="cell" headers=" total price">240$</td>
+				<td>
+					<!-- nested table in detailed column -->
+					<table>
+						<thead>
+							<tr role="row">
+								<th style="font-size: 20px;" class="headers">Weight</th>
+								<th style="font-size: 20px;" class="headers">Brand</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr role="row">
+								<td>0.5kg</td>
+								<td>Wilson</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr role="row">
+				<td role="cell" headers="item">Ball</td>
+				<td role="cell" headers="quantity">2</td>
+				<td role="cell" headers="price">120$</td>
+				<td role="cell" headers=" total price">240$</td>
+				<td>
+					<!-- nested table in detailed column -->
+					<table>
+						<thead>
+							<tr role="row">
+								<th style="font-size: 20px;" class="headers">Weight</th>
+								<th style="font-size: 20px;" class="headers">Brand</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr role="row">
+								<td>0.5kg</td>
+								<td>Wilson</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr role="row">
+				<td role="cell" headers="item">Ball</td>
+				<td role="cell" headers="quantity">2</td>
+				<td role="cell" headers="price">120$</td>
+				<td role="cell" headers=" total price">240$</td>
+				<td>
+					<!-- nested table in detailed column -->
+					<table>
+						<thead>
+							<tr role="row">
+								<th style="font-size: 20px;" class="headers">Weight</th>
+								<th style="font-size: 20px;" class="headers">Brand</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr role="row">
+								<td>0.5kg</td>
+								<td>Wilson</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<td role="cell" style="background-color:rgb(244, 137, 5); height: 30px;" colspan="3"> Total Price of all items:
+			</td>
+			<td role="cell" style="background-color: rgb(244, 137, 5);">960$ </td>
+			<td role="cell" style="background-color: rgb(244, 137, 5);"> </td>
+		</tfoot>
+
+
+</body>
+<!-- 2024 December Calendar table -->
+<table border="1" >
+	<caption><b>Calendar</b></caption>
+	<thead style="font-size: 2em;">
+		 <tr class="headers">
+			  <th>Su</th>
+			  <th>Mo</th>
+			  <th>Tu</th>
+			  <th>We</th>
+			  <th>Th</th>
+			  <th>Fr</th>
+			  <th>Sa</th>
+		 </tr>
+	</thead>
+	<tbody style="font-size: 1.5em;">
+		 <tr>
+			  <td>1</td>
+			  <td>2</td>
+			  <td>3</td>
+			  <td>4</td>
+			  <td>5</td>
+			  <td>6</td>
+			  <td>7</td>
+			
+		 </tr>
+		 <tr>
+			  <td>8</td>
+			  <td>9</td>
+			  <td>10</td>
+			  <td>11</td>
+			  <td>12</td>
+			  <td>13</td>
+			  <td>14</td>
+		 </tr>
+		 <tr>
+			  <td>15</td>
+			  <td>16</td>
+			  <td>17</td>
+			  <td>18</td>
+			  <td>19</td>
+			  <td>20</td>
+			  <td>21</td>
+		 </tr>
+		 <tr>
+			  <td>22</td>
+			  <td>23</td>
+			  <td>24</td>
+			  <td>25</td>
+			  <td>26</td>
+			  <td>27</td>
+			  <td>28</td>
+		 </tr>
+		 <tr>
+			  <td>29</td>
+			  <td>30</td>
+			  <td>31</td>
+			  <td></td>
+			  <td></td>
+			  <td></td>
+			  <td></td>
+		 </tr>
+	</tbody>
+</table>
+</html>
