@@ -1,0 +1,86 @@
+body{
+	scrollbar-color: rebeccapurple green;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 24px;
+	overflow-y: auto;
+	color: white;
+}
+img{
+	position: fixed;
+	left: 0px;
+	top: -40px;
+	width: 100vw;
+	z-index: -1;
+}
+.main::after{
+	content: "";
+	background-color: rgb( 10, 10, 30, .8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.main > h1,
+.main > p{
+	text-align: center;
+	font-size: 35px;
+	z-index: 2;
+	position: relative;
+}
+.main-content{
+	background-color: rgb(27, 27, 50, .9);
+	max-width: 650px;
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	border-radius: 5px;
+	z-index: 2;
+   position: relative;
+	box-shadow: 0 5px 10px -12px plum;
+}
+#name, #email, #dropdown, #number, #comment{
+	display: block;
+	width: 100%;
+	height: 35px;
+	padding: 5px 10px;
+	color: #000000;
+	background-color: #ffffff;
+	border: 5px;
+	border-radius: 10px;
+	margin-bottom: 40px;
+
+}
+#comment{
+	
+	min-height: 150px;
+}
+label[for=email],
+label[for=dropdown],
+label[for=name],
+label[for=number],
+label[for=comment]{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+label[for=comment]{
+	margin-top: 30px;
+
+}
+#submit{
+	width: 100%;
+	height: 40px;
+	color: white;
+	background-color: green;
+	border-radius: 20px;
+
+}
