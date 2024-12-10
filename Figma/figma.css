@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+*{
+	padding: 0;
+	margin: 0;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+  background-color: #611ECB;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  
+}
+.checked {
+	color:#611ECB;
+ }
+.content{
+	width: 1000px;
+	height: 460px;
+	background-color: white;
+	border-collapse: collapse;
+	font-size: 0.9em;        
+	border-radius: 5px 5px 0px 0px; 
+	gap: 20px;
+	/* correction */
+}
+.content th{
+	font-size: 1em;
+}
+caption{
+	color: aqua;
+	text-align: start;
+}
+.content thead tr{
+	background-color: #F5F5F5;
+	color: black;
+	text-align: left;
+   font-weight: bold;
+}
+.content th,
+.content td{
+	padding: 12px 15px;
+	text-align: left;
+}
+.star{
+	background-color: white;
+}
+.content tbody tr{
+	border-bottom:  1px solid #E1CFFF;
+}
+.content tbody tr:hover{
+	color: #611ECB;
+	background-color: #EEE3FF;
+	
+}
+
+ 
