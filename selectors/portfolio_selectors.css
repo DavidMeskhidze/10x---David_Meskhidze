@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+*{
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+body{
+background-color: #9b1c31;
+}
+/* styles all h1 elements */
+h1{
+	text-align: center;
+	color: darkblue;
+}
+/* styles all h2 elements */
+
+h2{
+	font-size: 24px;
+}
+/* styles all h3 elements */
+h3{
+	font-size: 20px;
+	color: darkgreen;
+}
+/* styles all p elements */
+p{
+	line-height: 1.5;
+	font-size: 16px;
+}
+/* styles first project */
+.project1{
+	background-color: #021f7f;
+	padding: 10px;
+	margin: 10px;
+	border: 10px;
+}
+/* styles second project */
+.project2{
+	background-color:blueviolet;
+	padding: 10px;
+	margin: 10px;
+	border: 10px;
+}
+/* styles third project */
+.project3{
+	background-color: white;
+	padding: 10px;
+	margin: 10px;
+	border: 10px;
+}
+/* styles about section */
+#about{
+	background-color: light grey;
+	text-align: center;
+}
+/* styles skills section */
+#skills{
+	background-color: light yellow;
+
+}
+/* styles all list elements in skills section */
+#skills li{
+	font-weight: bold;
+}
+/* styles all list elements in nav section */
+nav li{
+	color: darkred;
+list-style-type: none;
+}
+/* styles all h3 elements that are direct children of projects section */
+#projects>h3{
+ color: black;
+ font-weight: bolder;
+}
+/* styles blockquote */
+
+blockquote {
+  font-style: italic;
+}
+blockquote > p {
+  display:block;
+}
+blockquote:before {
+  content: '“';
+}
+blockquote:after {
+  content: '”';
+}
+/* styles img with src attribute*/
+img[src] {
+	border: 2px solid black;
+	border-radius: 50%;
+}
+/* styles all a tags during hover */
+a:hover{
+	color: orange;
+	text-decoration: underline;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+/* puts star before every list item in skills section*/
+#skills li::before{
+	content: "⭐";
+}
+
