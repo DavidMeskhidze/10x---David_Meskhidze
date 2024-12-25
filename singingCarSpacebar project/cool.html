@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="cool1.css">
+</head>
+
+<body>
+	<div class="back"></div>
+	<div class="heart"></div>
+	<div class="gallery">
+
+		<img src="img/BCE0DDD35E7E4D9CA16F7DA7480B8E92_76B645B61F5244E08438DFDD4F360BF6_BX24I3HOX0040_desktop.avif" alt="a dream catcher">
+		<img src="img/DE9B7F8D1C6948F1AF6B4114B75C3F3A_21F9585F38A6419A9C461B4EBFFB28AD_Nevada---Desktop.avif" alt="a piano">
+		<img src="img/download (1).jpg" alt="a live concert">
+		<img src="img/download (2).jpg" alt="Paris">
+		<img src="img/DE9B7F8D1C6948F1AF6B4114B75C3F3A_21F9585F38A6419A9C461B4EBFFB28AD_Nevada---Desktop.avif" alt="slme">
+		<img src="img/images.jpg" alt="slme">
+		<img src="img/istockphoto-1419988769-612x612.jpg" alt="slme">
+		<img src="img/multiple-angles-same-exact-car-purple-porsche-gt3rs-las-vegas-clear-night-time-weather-zoomed-dslr-ultra-detailed-8k-ar-32-v-61-job-id-eed0ec86f6f24826a8f9b9c613490b74_1124573-48474.avif" alt="slme">
+
+		<!-- <img src="img/image (7).png" alt="slme">
+		<img src="img/image (8).png" alt="slme"> -->
+		<img src="img/images (1).jpg" alt="slme">
+
+	</div>
+ <!-- Audio element -->
+ <audio id="bg-audio">
+	<source src="img/Ellie Goulding - Love Me Like You Do (Lyrics).mp3" type="audio/mp3">
+	Your browser does not support the audio element.
+</audio>
+
+<p>Press the <strong>Spacebar</strong> to play the audio.</p>
+
+<script>
+	const audio = document.getElementById('bg-audio');
+
+	// Attempt to play audio on page load
+	window.addEventListener('load', () => {
+		 audio.play().catch(() => {
+			  console.warn("Autoplay is blocked. Press Spacebar to start the audio.");
+		 });
+	});
+
+	// Listen for Spacebar press
+	document.addEventListener('keydown', (event) => {
+		 if (event.code === 'Space') { // Check if Spacebar is pressed
+			  audio.play().then(() => {
+					console.log("Audio started playing via Spacebar!");
+			  }).catch(error => {
+					console.error("Failed to play audio:", error);
+			  });
+			  event.preventDefault(); // Prevent default spacebar behavior (scrolling)
+		 }
+	});
+</script>
+  
+
+</body>
+
+</html>
