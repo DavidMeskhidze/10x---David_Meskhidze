@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="header.css">
+	<title>Document</title>
+</head>
+<body>
+	<div id="left-side" class="side">
+		<h2 class="title">
+		  When U smile you look
+		  <span class="fancy">better</span>      
+		</h2>
+	 </div>
+	 <div id="right-side" class="side">
+		<h2 class="title">
+			When U shout you look
+		  <span class="fancy">worse</span>     
+		</h2>
+	 </div>
+	<script>
+	const left = document.getElementById("left-side");
+
+		const handleMove = e => {
+		  left.style.width = `${e.clientX / window.innerWidth * 100}%`;
+		}
+		
+		document.onmousemove = e => handleMove(e);
+		
+		document.ontouchmove = e => handleMove(e.touches[0]);
+		</script>
+	 
+	
+</body>
+</html>
