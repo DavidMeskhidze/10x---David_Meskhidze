@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="items">
+			<p class="line">david </p>
+			<p class="line">iltmt</p>
+		</div>
+		<div class="items">
+			<p class="line">web</p>
+			<p class="line">&</p>
+			<p class="line">mobile</p>
+		</div>
+		<div class="items">
+			<p class="line">development</p>
+		</div>
+		<div class="items">
+			<p class="line">+995 512 312 314</p>
+		</div>
+		<div class="items">
+			<a 
+       id="channel-link" 
+       href="https://svelte.dev/" 
+       target="_blank" 
+       class="line fancy"
+    >
+      @ILTMTINFINITY
+    </a>
+		</div>
+	</div>
+	<script>
+		const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+		const enhance = id => {
+  const element = document.getElementById(id),
+        text = element.innerText.split("");
+  
+  element.innerText = "";
+  
+  text.forEach((value, index) => {
+    const outer = document.createElement("span");
+    
+    outer.className = "outer";
+    
+    const inner = document.createElement("span");
+    
+    inner.className = "inner";
+    
+    inner.style.animationDelay = `${rand(-5000, 0)}ms`;
+    
+    const letter = document.createElement("span");
+    
+    letter.className = "letter";
+    
+    letter.innerText = value;
+    
+    letter.style.animationDelay = `${index * 1000 }ms`;
+    
+    inner.appendChild(letter);    
+    
+    outer.appendChild(inner);    
+    
+    element.appendChild(outer);
+  });
+}
+
+enhance("channel-link");
+	</script>
+</body>
+</html>
