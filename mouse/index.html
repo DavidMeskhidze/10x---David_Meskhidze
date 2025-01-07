@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="trailer">
+        <i id="trailer-icon" class="fa-solid fa-arrow-up"></i>
+      </div>
+      <div id="trailer">
+        <i id="trailer-icon" class="fa-brands fa-youtube"></i>
+      </div>
+      
+      <div 
+        class="interactable" 
+        data-type="link"
+        style="background-image:url(img/images.jpg) ";>
+      </div>
+      
+      <div 
+        class="interactable" 
+        data-type="video"
+        style="background-image: url(img/sddefault.jpg); background-repeat: none;
+    size: cover; "> 
+        <a href="https://www.youtube.com/watch?v=f4uVzWTu5dc"></a>    
+      </div>
+      
+<script>
+    const trailer = document.getElementById("trailer");
+
+const animateTrailer = (e, interacting) => {
+  const x = e.clientX - trailer.offsetWidth / 2,
+        y = e.clientY - trailer.offsetHeight / 2;
+  
+  const keyframes = {
+    transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
+  }
+  
+  trailer.animate(keyframes, { 
+    duration: 800, 
+    fill: "forwards" 
+  });
+}
+
+const getTrailerClass = type => {
+  switch(type) {
+    case "video":
+      return "fa-brands fa-youtube";
+    default:
+      return "fa-solid fa-arrow-up"; 
+  }
+}
+
+window.onmousemove = e => {
+  const interactable = e.target.closest(".interactable"),
+        interacting = interactable !== null;
+  
+  const icon = document.getElementById("trailer-icon");
+  
+  animateTrailer(e, interacting);
+  
+  trailer.dataset.type = interacting ? interactable.dataset.type : "";
+  
+  if(interacting) {
+    icon.className = getTrailerClass(interactable.dataset.type);
+  }
+}
+</script>
+</body>
+</html>
