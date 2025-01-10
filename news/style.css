@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: red;
+	z-index: 20;
+	position:relative;
+}
+.vertica-text
+{
+	writing-mode:vertical-rl;
+	text-transform:capitalize;
+	
+}
+.rotate
+{
+	transform: rotate(-90deg);
+	z-index: 10;
+}
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a:hover
+{
+	transform: rotate(2deg);
+}
+
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+	
+	position: relative;
+}
+
+.anim
+{
+	position: relative;
+	animation:  bsu 20s infinite;
+}
+@keyframes bsu
+{
+	0%   {top: 0px; left: 0px; background: red;transform: rotate(0deg);}
+	25%  {top: 0px; left: -100px; background: green;transform: rotate(90deg);}
+	50%  {top: 100px; left: -100px; background: blue;transform: rotate(180deg);}
+	75%  {top: 100px; left: 0px; background: yellow;transform: rotate(270deg);}
+	100%  {top: 0px; left: 0px; background: pink;transform: rotate(360deg);}
+}
+@keyframes bsu2
+{
+	0%  {transform: rotate(0deg);background: red;}
+	25%   {transform: rotate(90deg);background: green;}
+	50%  {transform: rotate(180deg);background: blue;}
+	75%  {transform: rotate(270deg);background: yellow;}	
+	100%  {transform: rotate(360deg);background: pink;}
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+	  
+  }
+	.rightcolumn{display: none;}
+}
