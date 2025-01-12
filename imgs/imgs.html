@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	
+	<img src="img/photo-1695760832442-6e4f479f8786.avif" alt="" class="image" data-index="0" data-status="inactive">
+	<img src="img/photo-1708893634094-f6604d94e43f.avif" alt="" class="image" data-index="1" data-status="inactive">
+	<img src="img/photo-1709884735028-8c4c38e673da.avif" alt="" class="image"data-index="2" data-status="inactive">
+	<img src="img/photo-1711322114046-8a2852223dbe.avif" alt="" class="image" data-index="3" data-status="inactive">
+	<img src="img/photo-1728725045728-60c0beb17c02.avif" alt="" class="image" data-index="4" data-status="inactive">
+	<img src="img/photo-1728725045728-60c0beb17c02.avif" alt="" class="image" data-index="5" data-status="inactive">
+	<img src="img/photo-1730322326739-c7fbbbf26884.avif" alt="" class="image" data-index="6" data-status="inactive">
+	<img src="img/premium_photo-1682091872078-46c5ed6a006d.avif" alt="" class="image" data-index="7" data-status="inactive">
+	<img src="img/premium_photo-1684445034763-013f0525c40c.avif" alt="" class="image" data-index="8" data-status="inactive">
+	<img src="img/premium_photo-1686064756554-3944caf1ae87.avif" alt="" class="image" data-index="9" data-status="inactive">
+</body>
+
+<script>
+	const images = document.getElementsByClassName("image");
+
+let globalIndex = 0,
+    last = { x: 0, y: 0 };
+
+const activate = (image, x, y) => {
+  image.style.left = `${x}px`;
+  image.style.top = `${y}px`;
+  image.style.zIndex = globalIndex;
+
+  image.dataset.status = "active";
+
+  last = { x, y };
+}
+
+const distanceFromLast = (x, y) => {
+  return Math.hypot(x - last.x, y - last.y);
+}
+
+const handleOnMove = e => {
+  if(distanceFromLast(e.clientX, e.clientY) > (window.innerWidth / 20)) {
+    const lead = images[globalIndex % images.length],
+          tail = images[(globalIndex - 5) % images.length];
+
+    activate(lead, e.clientX, e.clientY);
+
+    if(tail) tail.dataset.status = "inactive";
+    
+    globalIndex++;
+  }
+}
+
+window.onmousemove = e => handleOnMove(e);
+
+window.ontouchmove = e => handleOnMove(e.touches[0]);
+</script>
+</html>
