@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+*{
+	padding: 0;
+	margin: 0;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+	width: 100vw;
+	height: 100vh;
+	
+}
+.container{
+	display: flex;
+	width: 80%;
+	height: 700px;
+	margin: 0 auto;
+	border: 10px solid black;
+
+}
+.item{
+width: 150px;
+height: 150px;
+background-color: blueviolet;
+padding: 1em;
+text-align: center;
+border: 10px solid;
+border-radius: 10px;
+}
+.item-1{
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+.item-2{
+	flex-grow: 1;
+}
+.item-3{
+	flex-grow: 1;
+}
