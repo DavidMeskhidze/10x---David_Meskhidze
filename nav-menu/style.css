@@ -1,0 +1,63 @@
+body,
+main{
+	width: 100vw;
+	height: 100vh;
+	margin: 0px;
+	background-color: black;
+   
+}
+main{
+	background-image: url(img/Screenshot\ \(101\).png);
+	background-size: cover;
+	background-position: center 0%;
+	position: relative;
+	z-index: 2;
+	transition: transform 500ms cubic-bezier(.13, .53, .39, .97);
+}
+body[data-nav="true"] > main {
+	transform: translateY(-50%);
+ }
+#nav-toggle{
+	height: 5rem;
+	width: 5rem;
+	z-index: 3;
+	position: fixed;
+	left: 50%;
+	bottom: 3rem;
+	transform: translateX(-50%);
+	background-color: rgb(182, 142, 113);
+   border-radius: 5rem;
+	outline: none;
+	box-shadow: 3rem 3rem 4rem rgba(10, 10, 10, 10 / 50%);
+	cursor: pointer;
+	transition: transform, background-color;
+	transition-timing-function: ease;
+	transition-duration: 500ms;
+}
+#nav-toggle:hover {
+	transform: translateX(-50%) scale(1.05);
+}
+#nav-toggle:active {
+	transform: translateX(-50%) scale(0.96);
+}
+#nav-toggle > i{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+   transform: translate(-50%, -50%) scale(0.9);
+	color: rgb(246, 231, 224);
+	font-size: 1.75rem;
+	opacity: 0;
+	transition: transform, opacity;
+	transition-timing-function: ease;
+	transition-duration: 400ms;
+}
+body:not([data-nav="true"]) > #nav-toggle:hover > .open {
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1);
+ }
+ body[data-nav="true"] > #nav-toggle > .close {
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1);
+ } 
+
