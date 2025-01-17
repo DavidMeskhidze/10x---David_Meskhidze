@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+	<title>Document</title>
+
+</head>
+<body data-nav="false">
+	<main></main>
+	<nav>
+		<div id="nav-links">
+		  <a class="nav-link" href="#">
+			 <h2 class="nav-link-label rubik-font">Home</h2>
+			 <img class="nav-link-image" src="img/Screenshot (83).png" />
+		  </a>
+		  <a class="nav-link" href="#">
+			 <h2 class="nav-link-label rubik-font">Work</h2>
+			 <img class="nav-link-image" src="img/margot-robbie.gif" />
+		  </a>
+		  <a class="nav-link" href="#">
+			 <h2 class="nav-link-label rubik-font">About</h2>
+			 <img class="nav-link-image" src="img/Screenshot (254).png" />
+		  </a>
+		  <a class="nav-link" href="#">
+			 <h2 class="nav-link-label rubik-font">Contact</h2>
+			 <img class="nav-link-image" src="img/Screenshot (6).png" />
+		  </a>
+		  <a class="nav-link" href="#">
+			 <h2 class="nav-link-label rubik-font">Join Us</h2>
+			 <img class="nav-link-image" src="img/Screenshot (101).png" />
+		  </a>
+		</div>
+	 </nav>
+	<button id="nav-toggle" type="button" onclick="tognav()">
+		<i class="open fa-solid fa-bars-staggered" class="open"></i>
+		<i class="close fa-solid fa-xmark"></i>
+	</button>
+</body>
+<script>
+	const tognav = () =>{
+    document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
+	}
+</script>
+</html>
